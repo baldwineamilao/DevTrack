@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DevTrack - Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+     <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <i class="fa-solid fa-code sidebar-logo-icon"></i>
+                <span>DevTrack</span>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-link">▦ Dashboard</a>
+                <a href="projects.html" class="sidebar-link">▣ Projects</a>
+                <a href="tasks.html" class="sidebar-link">✓ Tasks</a> 
+                <a href="activity.html" class="sidebar-link">◷ Activity</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="settings.html" class="sidebar-link">⚙ Settings</a>
+                <a href="#" class="sidebar-link logout-link" id="logoutButton">↪ Logout</a>
+            </div>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Top Bar -->
+            <header class="topbar">
+
+                <div>
+                    <p class="page-label">Workspace</p>
+                    <h1>Dashboard</h1>
+                </div>
+
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        U
+                    </div>
+
+                    <div class="user-info">
+                        <strong id="usernameDisplay">User</strong>
+                        <span>Developer</span>
+                    </div>
+                </div>
+
+            </header>
+
+
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+
+                <div>
+                    <p class="welcome-label">Welcome back 👋</p>
+                    <h2>Let's build something great.</h2>
+                    <p class="welcome-description">
+                        Keep track of your projects, tasks, and development progress.
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- Statistics -->
+            <section class="stats-grid">
+
+                <a href="projects.html" class="stat-card stat-card-link">
+
+                    <div class="stat-icon">
+                        ▣
+                    </div>
+
+                    <div>
+                        <p>Projects</p>
+                        <h3>0</h3>
+                    </div>
+
+                </a>
+
+
+                <a href="tasks.html" class="stat-card stat-card-link">
+
+                    <div class="stat-icon">
+                        ✓
+                    </div>
+
+                    <div>
+                        <p>Tasks</p>
+                        <h3>0</h3>
+                    </div>
+
+                </a>
+
+
+                <a href="tasks.html" class="stat-card stat-card-link">
+
+                    <div class="stat-icon">
+                        ◷
+                    </div>
+
+                    <div>
+                        <p>In Progress</p>
+                        <h3>0</h3>
+                    </div>
+
+                </a>
+
+
+                <a href="tasks.html" class="stat-card stat-card-link">
+
+                    <div class="stat-icon">
+                        ★
+                    </div>
+
+                    <div>
+                        <p>Completed</p>
+                        <h3>0</h3>
+                    </div>
+
+                </a>
+
+            </section>
+
+
+            <!-- Projects -->
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <p class="section-label">Workspace</p>
+                        <h2>Recent Projects</h2>
+                    </div>
+
+                    <button class="primary-button">
+                        + New Project
+                    </button>
+
+                </div>
+
+
+                <div id="recentProjectsContainer">
+
+                <div class="empty-state">
+
+                    <div class="empty-icon">
+                        +
+                    </div>
+
+                    <h3>Loading projects...</h3>
+
+                    <p>
+                        Please wait while your projects are loaded.
+                    </p>
+
+                </div>
+
+            </div>
+
+            </section>
+
+
+            <!-- Tasks -->
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <p class="section-label">Your workload</p>
+                        <h2>Recent Tasks</h2>
+                    </div>
+
+                </div>
+
+
+                <div id="recentTasksContainer">
+
+                    <div class="empty-state">
+
+                        <div class="empty-icon">
+                        ✓
+                        </div>
+
+                        <h3>Loading tasks...</h3>
+
+                        <p>
+                            Please wait while your tasks are loaded.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- ==========================================
+     LOGOUT CONFIRMATION MODAL
+     ========================================== -->
+
+    <div class="modal-overlay" id="logoutModal">
+
+        <div class="modal">
+
+            <div class="modal-header">
+                <h2>Logout</h2>
+            </div>
+
+            <div class="modal-body">
+                <p>Are you sure you want to logout?</p>
+            </div>
+
+            <div class="modal-footer">
+
+                <button
+                    type="button"
+                    class="secondary-button"
+                    id="cancelLogoutButton">
+                    Cancel
+                </button>
+
+                <button
+                    type="button"
+                    class="primary-button"
+                    id="confirmLogoutButton">
+                    Logout
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/dashboard.js"></script>
+
+</body>
+</html>

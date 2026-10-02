@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | DevTrack</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+          <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Sidebar -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <i class="fa-solid fa-code sidebar-logo-icon"></i>
+                <span>DevTrack</span>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="sidebar-link">▦ Dashboard</a>
+                <a href="projects.html" class="sidebar-link">▣ Projects</a>
+                <a href="tasks.html" class="sidebar-link">✓ Tasks</a> 
+                <a href="activity.html" class="sidebar-link">◷ Activity</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="settings.html" class="sidebar-link">⚙ Settings</a>
+                <a href="#" class="sidebar-link logout-link" id="logoutButton">↪ Logout</a>
+            </div>
+
+        </aside>
+
+
+        <!-- Main Content -->
+
+        <main class="main-content">
+
+            <header class="page-header">
+
+                <div>
+
+                    <h1>Settings</h1>
+
+                    <p>
+                        Manage your account and application preferences.
+                    </p>
+
+                </div>
+
+            </header>
+
+
+            <!-- Personal Information -->
+
+            <section class="settings-section">
+
+                <div class="settings-section-header">
+
+                    <h2>Personal Information</h2>
+
+                    <p>
+                        Manage your personal account information.
+                    </p>
+
+                </div>
+
+
+                <!-- Profile Picture -->
+
+                <div class="profile-picture-section">
+
+                    <div class="profile-picture-container">
+
+                        <img
+                            id="profilePicture"
+                            class="profile-picture"
+                            src=""
+                            alt="Profile Picture"
+                        >
+
+                        <div
+                            id="profilePicturePlaceholder"
+                            class="profile-picture-placeholder">
+
+                            👤
+
+                        </div>
+
+                    </div>
+
+                    <div class="profile-picture-info">
+
+                        <h3>Profile Picture</h3>
+
+                        <p>
+                            Upload a profile picture for your DevTrack account.
+                        </p>
+
+                        <p class="profile-picture-hint">
+                            JPG, JPEG, PNG or WEBP.
+                        </p>
+
+                        <input
+                            type="file"
+                            id="profilePictureInput"
+                            accept=".jpg,.jpeg,.png,.webp"
+                            hidden
+                        >
+
+                        <button
+                            type="button"
+                            class="secondary-button"
+                            id="chooseProfilePictureButton">
+
+                            Choose Picture
+
+                        </button>
+
+                        <button
+                            type="button"
+                            class="delete-profile-picture-button"
+                            id="removeProfilePictureButton">
+
+                            Remove
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Username -->
+
+                <div class="form-group">
+
+                    <label for="username">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Username"
+                    >
+
+                </div>
+
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Email"
+                        >
+
+                    </div>
+
+
+                    <!-- First Name / Last Name -->
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="firstName">
+                                First Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="firstName"
+                                placeholder="First Name"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="lastName">
+                                Last Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="lastName"
+                                placeholder="Last Name"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="primary-button"
+                        id="saveProfileButton">
+
+                        Save Changes
+
+                    </button>
+
+            </section>
+
+
+            <!-- Appearance -->
+
+            <section class="settings-section">
+
+                <div class="settings-section-header">
+
+                    <h2>Appearance</h2>
+
+                    <p>
+                        Customize how DevTrack looks.
+                    </p>
+
+                </div>
+
+
+                <div class="settings-option">
+
+                    <div>
+
+                        <h3>Dark Mode</h3>
+
+                        <p>
+                            Use a darker appearance throughout DevTrack.
+                        </p>
+
+                    </div>
+
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="darkModeToggle"
+                        >
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+            </section>
+
+
+            <!-- Security -->
+
+            <section class="settings-section">
+
+                <div class="settings-section-header">
+
+                    <h2>Security</h2>
+
+                    <p>
+                        Manage your account security.
+                    </p>
+
+                </div>
+
+
+                <div class="settings-option">
+
+                    <div>
+
+                        <h3>Change Password</h3>
+
+                        <p>
+                            Update your account password.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="secondary-button">
+
+                        Change Password
+
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- Logout Confirmation Modal -->
+<div class="modal-overlay" id="logoutModal">
+
+    <div class="modal">
+
+        <div class="modal-header">
+            <h2>Logout</h2>
+        </div>
+
+        <div class="modal-body">
+            <p>Are you sure you want to logout?</p>
+        </div>
+
+        <div class="modal-footer">
+
+            <button
+                type="button"
+                class="secondary-button"
+                id="cancelLogoutButton">
+                Cancel
+            </button>
+
+            <button
+                type="button"
+                class="primary-button"
+                id="confirmLogoutButton">
+                Logout
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/settings.js"></script>
+
+</body>
+</html>
